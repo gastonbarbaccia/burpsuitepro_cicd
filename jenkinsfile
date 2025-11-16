@@ -54,7 +54,7 @@ pipeline {
                 sh """
                     ssh -o StrictHostKeyChecking=no -i ${env.PEM_PATH} ubuntu@${env.INSTANCE_IP} \
                     'sudo apt-get update -y && sudo apt-get upgrade -y && \
-                     sudo apt install curl git wget openjdk-17-jdk openjdk-17-jre openjdk-20-jdk openjdk-20-jre -y && \
+                     sudo apt install curl git wget openjdk-17-jdk openjdk-17-jre openjdk-17-jdk openjdk-17-jre -y && \
                      curl https://raw.githubusercontent.com/xiv3r/Burpsuite-Professional/main/install.sh | sudo bash'
                 """
             }
